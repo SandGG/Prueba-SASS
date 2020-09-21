@@ -40,16 +40,16 @@ body {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    .button__Aceptar{
+    &__Aceptar{
         @include boton-background-color(complemento.$button-Aceptar,complemento.$button-text-white);
     }
-    .button__Cancelar{
+    &__Cancelar{
         @include boton-background-color(complemento.$button-Cancelar,complemento.$button-text-black);
     }
-    .button__Peligro{
+    &__Peligro{
         @include boton-background-color(complemento.$button-Peligro,complemento.$button-text-white);
     }
-    .button__Pregunta{
+    &__Pregunta{
         @include boton-background-color(complemento.$button-Pregunta,complemento.$button-text-black);
     }
 }
@@ -58,12 +58,12 @@ body {
     padding: 0;
     list-style: none;
     margin: 0;
-    .list__input{
+    &__input{
         opacity: 0;
         margin: 0;
         position: absolute;
     }
-    .list__label{
+    &__label{
         @extend %texto-shared;
         cursor: pointer;
         padding: 10px 16px;
@@ -73,8 +73,11 @@ body {
             background: complemento.$list-label-hover;
         }
     }
-    .list__input:checked ~ {
-        .list__accordion--sub{
+    &__accordion{
+        display: none;
+    }
+    &__input:checked ~ {
+        .list__accordion{
             display: block;
             padding: {
                 left: 10px;
@@ -82,44 +85,52 @@ body {
             }
         }
     }
-    .list__accordion--sub{
-        display: none;
-    }
-    .list__item{
+    &__item{
         padding-left: 16px;
 
         &:hover{
             background: complemento.$list-item-hover;
         }
     }
-    .list__link{
+    &__link{
         color: complemento.$letra-color;
         text-decoration: none;
     }
 }
 
 .fparagraph{
-    .fparagraph__text{
+    &__text{
         @extend %texto-shared;
     }
 }
 
 .form{
     @extend %container-shared;
-    .form__label{
+    &__label{
         @extend %texto-shared;
         margin-bottom: 10px;
     }
-    .form__input{
+    &__input{
         background-color: complemento.$fondo-input;
         margin-bottom: 10px;
         height: 20px;
         padding: 8px;
         border-radius: 10px;
     }
-    .form__button{
+    &__button{
         @extend %button-shared;
         background-color: complemento.$fondo-input;
+    }
+}
+
+$layout-breakpoint-small: 600px;
+
+@media (max-width: $layout-breakpoint-small) {
+    .list__accordion{
+        display: block;
+    }
+    .list__label{
+        padding: 5px 16px;
     }
 }
 

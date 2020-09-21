@@ -1,9 +1,9 @@
-.form .form__label, .fparagraph .fparagraph__text, .list .list__label, .form .form__button, .button .button__Pregunta, .button .button__Peligro, .button .button__Cancelar, .button .button__Aceptar {
+.form__label, .fparagraph__text, .list__label, .form__button, .button__Pregunta, .button__Peligro, .button__Cancelar, .button__Aceptar {
   font-family: Arial;
   font-size: 16px;
 }
 
-.form .form__button, .button .button__Pregunta, .button .button__Peligro, .button .button__Cancelar, .button .button__Aceptar {
+.form__button, .button__Pregunta, .button__Peligro, .button__Cancelar, .button__Aceptar {
   border: none;
   cursor: pointer;
   width: 20%;
@@ -28,19 +28,19 @@ body {
   display: flex;
   justify-content: center;
 }
-.button .button__Aceptar {
+.button__Aceptar {
   background: green;
   color: white;
 }
-.button .button__Cancelar {
+.button__Cancelar {
   background: orange;
   color: black;
 }
-.button .button__Peligro {
+.button__Peligro {
   background: red;
   color: white;
 }
-.button .button__Pregunta {
+.button__Pregunta {
   background: yellow;
   color: black;
 }
@@ -50,50 +50,60 @@ body {
   list-style: none;
   margin: 0;
 }
-.list .list__input {
+.list__input {
   opacity: 0;
   margin: 0;
   position: absolute;
 }
-.list .list__label {
+.list__label {
   cursor: pointer;
   padding: 10px 16px;
   display: block;
 }
-.list .list__label:hover {
+.list__label:hover {
   background: chocolate;
 }
-.list .list__input:checked ~ .list__accordion--sub {
+.list__accordion {
+  display: none;
+}
+.list__input:checked ~ .list__accordion {
   display: block;
   padding-left: 10px;
   padding-top: 5px;
 }
-.list .list__accordion--sub {
-  display: none;
-}
-.list .list__item {
+.list__item {
   padding-left: 16px;
 }
-.list .list__item:hover {
+.list__item:hover {
   background: burlywood;
 }
-.list .list__link {
+.list__link {
   color: black;
   text-decoration: none;
 }
 
-.form .form__label {
+.form__label {
   margin-bottom: 10px;
 }
-.form .form__input {
+.form__input {
   background-color: antiquewhite;
   margin-bottom: 10px;
   height: 20px;
   padding: 8px;
   border-radius: 10px;
 }
-.form .form__button {
+.form__button {
   background-color: antiquewhite;
+}
+
+@media (max-width: 600px) {
+  .list__accordion {
+    display: block;
+  }
+
+  .list__label {
+    padding: 5px 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
