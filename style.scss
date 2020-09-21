@@ -126,11 +126,13 @@ body {
 $layout-breakpoint-small: 600px;
 
 @media (max-width: $layout-breakpoint-small) {
-    .list__accordion{
+    .list{
+        &__accordion{
         display: block;
-    }
-    .list__label{
+        }
+        &__label{
         padding: 5px 16px;
+        }
     }
 }
 
