@@ -63,8 +63,18 @@ body {
 .list__label:hover {
   background: chocolate;
 }
+@media (max-width: 600px) {
+  .list__label {
+    padding: 5px 16px;
+  }
+}
 .list__accordion {
   display: none;
+}
+@media (max-width: 600px) {
+  .list__accordion {
+    display: block;
+  }
 }
 .list__input:checked ~ .list__accordion {
   display: block;
@@ -94,15 +104,6 @@ body {
 }
 .form__button {
   background-color: antiquewhite;
-}
-
-@media screen and (max-width: 600px) {
-  .list__accordion {
-    display: block;
-  }
-  .list__label {
-    padding: 5px 16px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

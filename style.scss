@@ -2,6 +2,7 @@
 
 $letra-tipo: Arial;
 $letra-tam: 16px;
+$breakpoint-small: 600px;
 
 %texto-shared{
     font-family: $letra-tipo;
@@ -72,9 +73,17 @@ body {
         &:hover{
             background: complemento.$list-label-hover;
         }
+
+        @media (max-width: $breakpoint-small) {
+            padding: 5px 16px;
+        }
     }
     &__accordion{
         display: none;
+
+        @media (max-width: $breakpoint-small) {
+            display: block;
+        }
     }
     &__input:checked ~ {
         .list__accordion{
@@ -122,17 +131,3 @@ body {
         background-color: complemento.$fondo-input;
     }
 }
-
-$breakpoint-small: 600px;
-
-@media screen and (max-width: $breakpoint-small) {
-    .list{
-        &__accordion{
-        display: block;
-        }
-        &__label{
-        padding: 5px 16px;
-        }
-    }
-}
-
