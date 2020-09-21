@@ -68,9 +68,10 @@ body {
         cursor: pointer;
         padding: 10px 16px;
         display: block;
-    }
-    .list__label:hover{
-        background: complemento.$list-label-hover;
+
+        &:hover{
+            background: complemento.$list-label-hover;
+        }
     }
     .list__input:checked ~ {
         .list__accordion--sub{
@@ -86,9 +87,10 @@ body {
     }
     .list__item{
         padding-left: 16px;
-    }
-    .list__item:hover{
-        background: complemento.$list-item-hover;
+
+        &:hover{
+            background: complemento.$list-item-hover;
+        }
     }
     .list__link{
         color: complemento.$letra-color;
