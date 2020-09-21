@@ -1,0 +1,123 @@
+@use 'complemento';
+
+$letra-tipo: Arial;
+$letra-tam: 16px;
+
+%texto-shared{
+    font-family: $letra-tipo;
+    font-size: $letra-tam;
+}
+
+%button-shared{
+    @extend %texto-shared;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 10px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+%container-shared{
+    width: 80%;
+    margin: 0 auto;
+    background: complemento.$fondo-container;
+    padding: 10px; 
+}
+
+@mixin boton-background-color($boton-background, $boton-color){
+    @extend %button-shared;
+    background: $boton-background;
+    color: $boton-color;
+}
+
+body {
+    background: complemento.$fondo-primario;
+}
+
+.button{
+    @extend %container-shared;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    .button__Aceptar{
+        @include boton-background-color(complemento.$button-Aceptar,complemento.$button-text-white);
+    }
+    .button__Cancelar{
+        @include boton-background-color(complemento.$button-Cancelar,complemento.$button-text-black);
+    }
+    .button__Peligro{
+        @include boton-background-color(complemento.$button-Peligro,complemento.$button-text-white);
+    }
+    .button__Pregunta{
+        @include boton-background-color(complemento.$button-Pregunta,complemento.$button-text-black);
+    }
+}
+
+.list{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    .list__input{
+        opacity: 0;
+        margin: 0;
+        position: absolute;
+    }
+    .list__label{
+        @extend %texto-shared;
+        cursor: pointer;
+        padding: 10px 16px;
+        display: block;
+    }
+    .list__label:hover{
+        background: complemento.$list-label-hover;
+    }
+    .list__input:checked ~ {
+        .list__accordion--sub{
+            display: block;
+            padding: {
+                left: 10px;
+                top: 5px;
+            }
+        }
+    }
+    .list__accordion--sub{
+        display: none;
+    }
+    .list__item{
+        padding-left: 16px;
+    }
+    .list__item:hover{
+        background: complemento.$list-item-hover;
+    }
+    .list__link{
+        color: complemento.$letra-color;
+        text-decoration: none;
+    }
+}
+
+.fparagraph{
+    .fparagraph__text{
+        @extend %texto-shared;
+    }
+}
+
+.form{
+    @extend %container-shared;
+    .form__label{
+        @extend %texto-shared;
+        margin-bottom: 10px;
+    }
+    .form__input{
+        background-color: complemento.$fondo-input;
+        margin-bottom: 10px;
+        height: 20px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+    .form__button{
+        @extend %button-shared;
+        background-color: complemento.$fondo-input;
+    }
+}
+

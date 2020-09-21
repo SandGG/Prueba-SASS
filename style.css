@@ -1,0 +1,99 @@
+.form .form__label, .fparagraph .fparagraph__text, .list .list__label, .form .form__button, .button .button__Pregunta, .button .button__Peligro, .button .button__Cancelar, .button .button__Aceptar {
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.form .form__button, .button .button__Pregunta, .button .button__Peligro, .button .button__Cancelar, .button .button__Aceptar {
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  border-radius: 10px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.form, .button {
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  padding: 10px;
+}
+
+body {
+  background: #d8d3cc;
+}
+
+.button {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.button .button__Aceptar {
+  background: green;
+  color: white;
+}
+.button .button__Cancelar {
+  background: orange;
+  color: black;
+}
+.button .button__Peligro {
+  background: red;
+  color: white;
+}
+.button .button__Pregunta {
+  background: yellow;
+  color: black;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.list .list__input {
+  opacity: 0;
+  margin: 0;
+  position: absolute;
+}
+.list .list__label {
+  cursor: pointer;
+  padding: 10px 16px;
+  display: block;
+}
+.list .list__label:hover {
+  background: chocolate;
+}
+.list .list__input:checked ~ .list__accordion--sub {
+  display: block;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.list .list__accordion--sub {
+  display: none;
+}
+.list .list__item {
+  padding-left: 16px;
+}
+.list .list__item:hover {
+  background: burlywood;
+}
+.list .list__link {
+  color: black;
+  text-decoration: none;
+}
+
+.form .form__label {
+  margin-bottom: 10px;
+}
+.form .form__input {
+  background-color: antiquewhite;
+  margin-bottom: 10px;
+  height: 20px;
+  padding: 8px;
+  border-radius: 10px;
+}
+.form .form__button {
+  background-color: antiquewhite;
+}
+
+/*# sourceMappingURL=style.css.map */

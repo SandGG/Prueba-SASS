@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="button">
+        <button class="button__Aceptar">Boton 1</button>
+        <button class="button__Cancelar">Boton 2</button>
+        <button class="button__Peligro">Boton 3</button>
+        <button class="button__Pregunta">Boton 4</button>
+    </div>
+    <ul class="list">
+        <li>
+            <input class="list__input" type="checkbox" name ="group-1" id="group-1">
+            <label class="list__label" for="group-1">Primero</label>
+            <ul class="list list__accordion--sub">
+                <li class="list__item"><a class="list__link" href="#">Segundo</a></li>
+                <li class="list__item"><a class="list__link" href="#">Tercero</a></li>                                 
+            </ul>
+        </li>
+        <li class="list__label"><a class="list__link" href="#">Cuarto</a>
+        </li>
+        <li>
+            <input class="list__input" type="checkbox" name ="group-3" id="group-3">
+            <label class="list__label" for="group-3">Quinto</label>
+            <ul class="list list__accordion--sub">
+                <li class="list__item"><a class="list__link" href="#">Sexto</a></li>
+                <li class="list__item"><a class="list__link" href="#">Septimo</a></li>
+                <li class="list__item"><a class="list__link" href="#">Octavo</a></li>
+            </ul>
+        </li>
+    </ul>   
+    <div class="fparagraph">
+        <p class="fparagraph__text"> Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto 
+            Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+        </p>
+    </div>
+    <form action="#" method="get" class="form">
+        <label class="form__label" for="fname">Apellidos:</label>
+        <input class="form__input" id="fname" name="lname" type="text" placeholder="Escribe tus apellidos"><br>
+        <label class="form__label" for="sname">Nombre</label>
+        <input class="form__input" id="sname" name="fname" type="text" placeholder="Escribe tu(s) nombre(s)"><br>
+        <input class="form__input" type="radio" id="masculino" name="genero" value="masculino">
+        <label class="form__label" for="masculino">Masculino</label><br>
+        <input class="form__input" type="radio" id="femenino" name="genero" value="femenino">
+        <label class="form__label" for="femenino">Femenino</label><br>
+        <input class="form__button" type="submit" value="Enviar">
+    </form>
+</body>
+</html>
