@@ -123,9 +123,9 @@ body {
     }
 }
 
-$layout-breakpoint-small: 600px;
+$breakpoint-small: 600px;
 
-@media (max-width: $layout-breakpoint-small) {
+@media screen and (max-width: $breakpoint-small) {
     .list{
         &__accordion{
         display: block;

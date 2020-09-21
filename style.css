@@ -96,7 +96,7 @@ body {
   background-color: antiquewhite;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .list__accordion {
     display: block;
   }
